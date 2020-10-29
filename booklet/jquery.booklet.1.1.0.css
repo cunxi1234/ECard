@@ -1,15 +1,13 @@
 
-	.booklet           {width:1000px; height:800px; position:relative; /*background:#fff;*/ margin:0 auto 10px;}
+	.booklet           {width:900px; height:800px; position:relative; margin:0 auto 10px;
+							}
 	.booklet .b-page  {left:0; top:0; position:absolute; overflow:hidden; padding:0;}
 	
-	.booklet .b-pN  {}
-	.booklet .b-p0  {}
-	.booklet .b-p1  {}
-	.booklet .b-p2  {}    
-	.booklet .b-p3  {}
-	.booklet .b-p4  {}
+
 	
-	/*.booklet .b-load  {display:none;}*/
+	.booklet .b-load  {
+		display: none;
+	}
    
    	/* Page Wrappers */
 	.booklet .b-wrap       {top:0; position:absolute;}
