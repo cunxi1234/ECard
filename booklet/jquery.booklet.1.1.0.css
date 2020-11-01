@@ -1,6 +1,5 @@
 	.booklet        	{width:900px; height:800px; position:relative; margin:0 auto 10px;}
 	.booklet .b-page  {left:0; top:0; position:absolute; overflow:hidden; padding:0;}
-	.booklet .b-load  {display: block;}
 
    	/* Page Wrappers */
 	.booklet .b-wrap       {top:0; position:absolute;}
@@ -24,10 +23,6 @@
 	.booklet .b-wrap-left  .b-counter {left:10px;}
 	.booklet .b-wrap-right .b-counter {right:10px;}
 
-   	/* Page Shadows */
-	.booklet .b-shadow-f  {right:0; top:0; position:absolute; opacity:0; background-image:url("images/shadow-top-forward.png"); background-repeat:repeat-y; background-position:100% 0;}
-	.booklet .b-shadow-b  {left:0;  top:0; position:absolute; opacity:0; background-image:url("images/shadow-top-back.png");    background-repeat:repeat-y; background-position:0 0;}
-
    	/* Overlay Controls */
 	.booklet .b-overlay      {top:0; position:absolute; height:100%; width:50%;}
 	.booklet .b-overlay-prev {left:0;}
@@ -38,30 +33,6 @@
 	.booklet .b-tab-prev   {left:0;}
 	.booklet .b-tab-next   {right:0;}
 	.booklet .b-tab:hover  {background:#aaa; color:#000;}
-
-   	/* Arrow Controls */
-	.booklet .b-arrow          {display:block; position:absolute; text-indent:-9999px; top:0; height:100%; width:74px;}
-	.booklet .b-arrow div      {display:none; text-indent:-9999px; height:170px; width:74px; position:absolute; left:0; top:20%;}
-	.booklet .b-arrow-next     {right:-80px;}
-	.booklet .b-arrow-prev     {left:-80px;}
-	.booklet .b-arrow-next div {background:url("images/arrow-next.png") no-repeat left top;}
-	.booklet .b-arrow-prev div {background:url("images/arrow-prev.png") no-repeat left top;}
-
-/* @z-index fix (needed for older IE browsers)
-----------------------------------------*/
-	body              	{z-index:0;}
-    .b-menu           {z-index:100;}
-    .b-selector       {z-index:100;}
-		.booklet          {z-index:10;}
-    .b-pN             {z-index:10;}
-    .b-p0             {z-index:10;}
-    .b-p1             {z-index:10;}
-    .b-p2             {z-index:10;}
-    .b-p3             {z-index:10;}
-    .b-p4             {z-index:10;}
-    .b-prev           {z-index:40;}
-    .b-next           {z-index:40;}
-    .b-counter        {z-index:40;}
 
 /* @Menu Items
 ----------------------------------------*/

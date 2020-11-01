@@ -110,17 +110,17 @@ p {
 .flipbook h1 {
   overflow: hidden;
 	white-space: nowrap; 
-	animation: 
-  typing 3.5s steps(40, end),.75s step-end infinite;
+	animation: typing 3.5s steps(40, end),.75s step-end infinite;
   color: orange;
   margin: 5px 5px 5px 15px;
-  font-size: 24px;
+  font-size: 21px;
   background: transparent url(images/h1.png) no-repeat bottom left;
   padding-bottom: 7px;
   text-transform: uppercase;
   font-weight: normal;
   z-index: 3;
   overflow: hidden;
+  text-align: center;
 }
 
 .flipbook p {
@@ -129,6 +129,7 @@ p {
   font-family: 'Poppins', sans-serif;
   position: relative;
   color: #15181f;
+  text-align: justify;
 }
 
 .flipbook p::before {

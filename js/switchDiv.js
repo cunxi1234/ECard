@@ -2,24 +2,33 @@ function switchDiv() {
   var calendar = document.getElementsByClassName("calendar")[0];
   var flipbook = document.getElementsByClassName("flipbook")[0];
   var firework = document.getElementsByClassName("firework")[0];
+
   flipbook.style.marginTop = "-10%";
+ 
   calendar.style.opacity = 1;
   (function fade() {
     if ((calendar.style.opacity -= 0.1) < 0) {
       calendar.remove();
       firework.remove();
-      flipbook.style.display = "block";
     } else {
       setTimeout(fade, 60);
     }
   })();
-  document.body.style.background = "url('images/3.jpg')";
+
+  setTimeout(function () {
+    flipbook.style.display = "block";
+    document.getElementById("footer").style.bottom = "17px";
+  }, 1000);
+
+  document.body.style.background = "url('images/125.jpg')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
   document.body.style.backgroundRepeat = "no-repeat";
 }
 
 function changeDate() {
+  document.getElementsByClassName("container")[0].style = "pointer-events:none;"
+
   var change = date.getDate();
 
   var interval = setInterval(function () {
@@ -35,7 +44,7 @@ function changeDate() {
         switchDiv();
       }, 5000);
     }
-  }, 550);
+  }, 520);
 }
 
 var deg = 0;
