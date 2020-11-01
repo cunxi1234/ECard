@@ -2,7 +2,10 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+
 	<title>ECard</title>
 
 	<link rel="stylesheet" href="css/style.css" type="text/css">
@@ -116,12 +119,12 @@
 
 		calendar.style.opacity = 1;
 		(function fade() {
-			if((calendar.style.opacity -= 0.1) < 0) {
+			if ((calendar.style.opacity -= 0.1) < 0) {
 				calendar.remove();
 				firework.remove();
 				flipbook.style.display = "block";
 			} else {
-				setTimeout(fade,60);
+				setTimeout(fade, 60);
 			}
 		})();
 	}
@@ -145,13 +148,13 @@
 			change++;
 			document.getElementsByClassName("day")[0].innerHTML = change;
 
-			if(change >= 20) {
+			if (change >= 20) {
 				clearInterval(interval);
 				var firework = document.getElementsByClassName("firework")[0].style;
 				firework.display = "block";
-					setTimeout(function () {
-						switchCard();
-					}, 5000);
+				setTimeout(function() {
+					switchCard();
+				}, 5000);
 			}
 		}, 550);
 	}
@@ -159,6 +162,7 @@
 
 <script>
 	var k = 0;
+
 	function flip() {
 		var j = document.getElementsByClassName("day")[0];
 		k += 180;
