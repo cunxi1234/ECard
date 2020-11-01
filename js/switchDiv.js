@@ -2,7 +2,7 @@ function switchDiv() {
   var calendar = document.getElementsByClassName("calendar")[0];
   var flipbook = document.getElementsByClassName("flipbook")[0];
   var firework = document.getElementsByClassName("firework")[0];
-
+  flipbook.style.marginTop = "-10%";
   calendar.style.opacity = 1;
   (function fade() {
     if ((calendar.style.opacity -= 0.1) < 0) {
@@ -13,12 +13,16 @@ function switchDiv() {
       setTimeout(fade, 60);
     }
   })();
+  document.body.style.background = "url('images/3.jpg')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundRepeat = "no-repeat";
 }
 
 function changeDate() {
   var change = date.getDate();
 
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     flip();
     change++;
     document.getElementsByClassName("day")[0].innerHTML = change;
@@ -27,7 +31,7 @@ function changeDate() {
       clearInterval(interval);
       var firework = document.getElementsByClassName("firework")[0].style;
       firework.display = "block";
-      setTimeout(function() {
+      setTimeout(function () {
         switchDiv();
       }, 5000);
     }

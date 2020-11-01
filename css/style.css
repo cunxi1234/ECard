@@ -108,6 +108,10 @@ p {
 }
 
 .flipbook h1 {
+  overflow: hidden;
+	white-space: nowrap; 
+	animation: 
+  typing 3.5s steps(40, end),.75s step-end infinite;
   color: orange;
   margin: 5px 5px 5px 15px;
   font-size: 24px;
@@ -337,3 +341,7 @@ p {
   80%, 99.9% {
     margin-top: 30%;
     margin-left: 80%; } }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+      }
