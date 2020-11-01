@@ -1,6 +1,6 @@
 body {
   color: #f9f9f9;
-  font: 100%/1.5em "Droid Sans", sans-serif
+  font: 100%/1.5em "Droid Sans", sans-serif;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -155,8 +155,6 @@ p {
 /* ---------- FIREWORK ---------- */
 .firework {
   display: none;
-  height: 100vh;
-  width: 100vh;
 }
 
 .firework > .before, .firework > .after {
@@ -198,6 +196,7 @@ p {
 @keyframes bang {
   from {
     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+
 @-webkit-keyframes gravity {
   to {
     transform: translateY(200px);
