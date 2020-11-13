@@ -3,9 +3,9 @@ function switchDiv() {
   var flipbook = document.getElementsByClassName("flipbook")[0];
   var firework = document.getElementsByClassName("firework")[0];
 
-  flipbook.style.marginTop = "-10%";
+  flipbook.style.marginTop = "-2%";
  
-  calendar.style.opacity = 1;
+ 
   (function fade() {
     if ((calendar.style.opacity -= 0.1) < 0) {
       calendar.remove();
@@ -17,10 +17,12 @@ function switchDiv() {
 
   setTimeout(function () {
     flipbook.style.display = "block";
-    document.getElementById("footer").style.bottom = "17px";
+   // document.getElementById("footer").style.bottom = "-10px";
   }, 1000);
-
-  document.body.style.background = "url('images/125.jpg')";
+  document.getElementById("border_left").style.width = "215px";
+  document.getElementById("border_left").style.height = "215px";
+  document.getElementById("border_right").style.width = "215px";
+  document.getElementById("border_right").style.height = "215px";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
   document.body.style.backgroundRepeat = "no-repeat";
