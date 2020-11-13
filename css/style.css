@@ -10,24 +10,6 @@ p {
   margin: 0;
 }
 
-#border_left {
-  top: 0;
-  left: 0;
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  display: none;
-}
-
-#border_right {
-  top: 0;
-  right: 0;
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  display: none;
-}
-
 .container {
   height: 248px;
   left: 65%;
