@@ -1,3 +1,4 @@
+
 function switchDiv() {
   var calendar = document.getElementsByClassName("calendar")[0];
   var flipbook = document.getElementsByClassName("flipbook")[0];
@@ -20,10 +21,7 @@ function switchDiv() {
    
    // document.getElementById("footer").style.bottom = "-10px";
   }, 1000);
-  document.getElementById("border_left").style.width = "215px";
-  document.getElementById("border_left").style.height = "215px";
-  document.getElementById("border_right").style.width = "215px";
-  document.getElementById("border_right").style.height = "215px";
+ 
   
 }
 
@@ -36,7 +34,6 @@ function changeDate() {
     flip();
     change++;
     document.getElementsByClassName("day")[0].innerHTML = change;
-
     if (change >= 20) {
       clearInterval(interval);
       var firework = document.getElementsByClassName("firework")[0].style;

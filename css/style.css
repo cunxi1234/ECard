@@ -10,6 +10,8 @@ p {
   margin: 0;
 }
 
+
+
 .container {
   height: 248px;
   left: 65%;
@@ -20,56 +22,7 @@ p {
  
 }
 
-/* ---------- CALENDAR ---------- */
 
-.calendar {
-  text-align: center;
-  transform: scale(1.5);
-}
-
-.calendar:hover {
-  opacity: 0.5;
-}
-
-.month {
-  background: #d9383c;
-  border-radius: 20px 20px 0 0;
-  color: #f9f9f9;
-  font-size: 20px;
-  line-height: 37.3px;
-  position: relative;
-}
-
-.month:before, .month:after {
-  background: #f9f9f9;
-  border-radius: 50%;
-  content: "";
-  height: 6px;
-  margin-top: -4px;
-  position: absolute;
-  top: 50%;
-  width: px;
-}
-
-.month:before {
-  left: 24px;
-}
-
-.month:after {
-  right: 24px;
-}
-
-.day {
-  background: #f9f9f9;
-  border-radius: 0 0 20px 20px;
-  -webkit-box-shadow: 0 8px 0 #15181f;
-  box-shadow: 10px 20px 5px #15181f;
-  color: #15181f;
-  font-size: 100px;
-  font-weight: bold;
-  height: 144px;
-  line-height: 133.34px;
-}
 
 /* ---------- FLIPBOOK ---------- */
 
@@ -87,6 +40,143 @@ p {
   border-radius: 10px;
   position: fixed;
   z-index: 2;
+}
+.calendar:hover {
+  opacity: 0.5;
+}
+.calendar p {
+  margin: 0 0 3px;
+  line-height: 1;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+.calendar {
+  position: relative;
+  width: 152px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.calendar::before,
+.calendar::after {
+  content: '';
+  position: absolute;
+  top: -28px;
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #ddd;
+  z-index: 3;
+}
+.calendar::after {
+  left: initial;
+  right: 40px;
+}
+.pages {
+  position: relative;
+  text-align: center;
+  background: #eee;
+  box-shadow: 0 10px 0 0px #a5a4a4;
+}
+.pages::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  background: indianred;
+  bottom: 100%;
+  left: 0;
+  z-index: 2;
+}
+.page {
+  position: relative;
+  padding: 20px 30px 15px;
+  background: #eee;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  bottom: 99%;
+  left: 0;
+  display: block;
+  background: linear-gradient(-45deg, #eee 10px, #eee 10px, #eee 10px, transparent 0), linear-gradient(45deg, #eee 10px, transparent 0);
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 10px 18px;
+  height: 10px;
+  width: 100%;
+}
+.month,
+.day-name {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.day {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+.year {
+  font-size: 12px;
+}
+.tear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  -webkit-animation: tear-animation 0.8s linear forwards;
+          animation: tear-animation 0.8s linear forwards;
+}
+@-webkit-keyframes tear-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: rotate(9deg);
+            transform: rotate(9deg);
+    top: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
+}
+@keyframes tear-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: rotate(9deg);
+            transform: rotate(9deg);
+    top: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
 }
 
 .booklet .b-counter {
@@ -108,6 +198,7 @@ p {
 }
 
 .flipbook h1 {
+  font-family: 'Dancing Script', cursive;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3.5s steps(40, end), .75s step-end infinite;
