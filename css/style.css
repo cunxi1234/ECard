@@ -1,55 +1,31 @@
 body {
   font: 100%/1.5em "Droid Sans", sans-serif;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
   background-color: #FCF6F5FF;
+  background: url('../images/background.jpg');
+	background-size: cover;
 }
-
-p {
-  margin: 0;
-}
-
-
 
 .container {
-  height: 248px;
-  left: 65%;
-  margin: -150px 0 0 -150px;
   position: relative;
-  top: 65%;
-  width: 200px;
- 
+  left: 50%;
+  top: 50%;
 }
 
+/* ---------- CALENDAR ---------- */
 
-
-/* ---------- FLIPBOOK ---------- */
-
-.booklet {
-  width: 100%;
-  height: 100%;
-  margin-top: 300px;
-  position: absolute;
-  margin: 0 auto 10px;
-  -moz-box-shadow: 0px 0px 1px #fff;
-  -webkit-box-shadow: 0px 0px 1px #fff;
-  box-shadow: 0px 0px 1px #fff;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  position: fixed;
-  z-index: 2;
-}
 .calendar:hover {
   opacity: 0.5;
 }
+
 .calendar p {
   margin: 0 0 3px;
   line-height: 1;
   letter-spacing: 1px;
   pointer-events: none;
+
 }
+
 .calendar {
   position: relative;
   width: 152px;
@@ -59,6 +35,7 @@ p {
       -ms-user-select: none;
           user-select: none;
 }
+
 .calendar::before,
 .calendar::after {
   content: '';
@@ -71,16 +48,20 @@ p {
   background: #ddd;
   z-index: 3;
 }
+
 .calendar::after {
   left: initial;
   right: 40px;
 }
+
 .pages {
   position: relative;
   text-align: center;
-  background: #eee;
+  background: #fff;
   box-shadow: 0 10px 0 0px #a5a4a4;
+  
 }
+
 .pages::before {
   content: '';
   position: absolute;
@@ -91,11 +72,16 @@ p {
   left: 0;
   z-index: 2;
 }
+
 .page {
   position: relative;
   padding: 20px 30px 15px;
   background: #eee;
+  border-left: rgb(50, 30, 30) solid 0.7px;
+  border-right: rgb(50, 30, 30) solid 0.7px;
+  border-bottom: rgb(50, 30, 30) solid 0.7px;
 }
+
 .page::before {
   content: '';
   position: absolute;
@@ -109,25 +95,29 @@ p {
   height: 10px;
   width: 100%;
 }
+
 .month,
 .day-name {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 .day {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 700px;
   margin: 0 0 15px;
 }
+
 .year {
   font-size: 12px;
 }
+
 .tear {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 80%;
   z-index: 1;
   -webkit-transform-origin: top left;
           transform-origin: top left;
@@ -136,6 +126,7 @@ p {
   -webkit-animation: tear-animation 0.8s linear forwards;
           animation: tear-animation 0.8s linear forwards;
 }
+
 @-webkit-keyframes tear-animation {
   0% {
     -webkit-transform: rotate(0deg);
@@ -157,6 +148,7 @@ p {
     opacity: 0;
   }
 }
+
 @keyframes tear-animation {
   0% {
     -webkit-transform: rotate(0deg);
@@ -179,6 +171,23 @@ p {
   }
 }
 
+/* ---------- FLIPBOOK ---------- */
+
+.booklet {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto 10px;
+  -moz-box-shadow: 0px 0px 1px #fff;
+  -webkit-box-shadow: 0px 0px 1px #fff;
+  box-shadow: 0px 0px 1px #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 2;
+}
+
 .booklet .b-counter {
   bottom: 10px;
   position: absolute;
@@ -189,11 +198,11 @@ p {
   color: #222;
   text-align: center;
   font-size: 12px;
-  padding: 5px 0 0;
   background: transparent;
   -moz-box-shadow: 0px -1px 1px #fff;
   -webkit-box-shadow: 0px -1px 1px #fff;
   box-shadow: 0px -1px 1px #fff;
+  font-family: Times;
   opacity: 0.8;
 }
 
@@ -205,7 +214,6 @@ p {
   color: orange;
   margin: 5px 5px 5px 15px;
   font-size: 21px;
-  background: transparent url(images/h1.png) no-repeat bottom left;
   padding-bottom: 7px;
   text-transform: uppercase;
   font-weight: normal;
@@ -232,6 +240,8 @@ p {
 
 .flipbook {
   display: none;
+  position: relative;
+  top: 20%;
 }
 
 .flipbook img {
